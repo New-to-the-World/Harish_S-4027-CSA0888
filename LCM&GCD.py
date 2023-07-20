@@ -1,12 +1,14 @@
-n1 = int(input("Enter First number :"))
-n2 = int(input("Enter Second number :"))
-x = n1
-y = n2
-while(n2!=0):
-    t = n2
-    n2 = n1 % n2
-    n1 = t
-gcd = n1
-print("GCD of {0} and {1} = {2}".format(x,y,gcd))
-lcm = (x*y)/gcd
-print("LCM of {0} and {1} = {2}".format(x,y,lcm))
+a=int(input("Enter first number: "))
+b=int(input("Enter second number: "))
+HCF = 1
+
+for i in range(2,a+1):
+    if(a%i==0 and b%i==0):
+        HCF = i
+
+LCM=(a*b)/HCF
+
+print("First Number is: ",a)
+print("Second Number is: ",b)
+print("HCF of the numbers is: ",HCF)
+print("LCMof the numbers is: ",LCM)
